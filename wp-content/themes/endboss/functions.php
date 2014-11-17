@@ -130,7 +130,7 @@ add_action( 'wp_enqueue_scripts', 'endboss_scripts' );
 * Fonts!
 */
 function load_fonts() {
-	wp_register_style('googleFonts', 'http://fonts.googleapis.com/css?family=Montserrat');
+	wp_register_style('googleFonts', 'http://fonts.googleapis.com/css?family=Exo');
 	wp_enqueue_style( 'googleFonts');
 }
 add_action('wp_print_styles', 'load_fonts');
@@ -202,4 +202,20 @@ function strip_empty_classes($menu) {
 	return $menu;
 }
 add_filter ('wp_nav_menu','strip_empty_classes');
+
+
+//
+//
+//Custom Post Types
+add_filter( 'pre_get_posts', 'my_get_posts' );
+
+function my_get_posts( $query ) {
+
+	if ( is_home() && $query->is_main_query() )
+		$query->set( 'post_type', array( 'post', 'page', 'album', 'movie', 'quote' ) );
+
+	return $query;
+}
+
+
 ?>

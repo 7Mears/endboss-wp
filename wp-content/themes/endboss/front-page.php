@@ -1,6 +1,4 @@
-<?php
-
-get_header(); ?>
+<?php get_header(); ?>
 
 <section id="hero">
   <div class="hero-section wrap">
@@ -12,35 +10,22 @@ get_header(); ?>
 <section id="about">
   <div class="about-section wrap">
     <h2>About</h2>
-
-    <div class="post">
-      <h4>Subject title</h4>
-      <p>Praesent egestas tristique nibh. Praesent ac massa at ligula laoreet iaculis. Quisque rutrum. In auctor lobortis lacus.</p>
-    </div>
-
-    <div class="post">
-      <h4>Subject title</h4>
-      <p>Praesent egestas tristique nibh. Praesent ac massa at ligula laoreet iaculis. Quisque rutrum. In auctor lobortis lacus.</p>
-    </div>
-
-    <div class="post">
-      <h4>Subject title</h4>
-      <p>Praesent egestas tristique nibh. Praesent ac massa at ligula laoreet iaculis. Quisque rutrum. In auctor lobortis lacus.</p>
-    </div>
+<?php include( get_template_directory() . '/front-page-about.php' ); ?>
   </div>
-  
+
 </section><!-- /about -->
 
 <section id="portfolio">
   <div class="portfolio-section wrap">
     <h2>Portfolio</h2>
-    <?php include( get_template_directory() . '/portfolio-featured.php' ); ?>
+<?php include( get_template_directory() . '/front-page-portfolio.php' ); ?>
   </div>
 </section><!-- /portfolio -->
 
 <section id="members">
   <div class="members-section wrap">
     <h2>Members</h2>
+<?php include( get_template_directory() . '/front-page-members.php' ); ?>
   </div>
 </section><!-- /members -->
 
