@@ -5,6 +5,33 @@
  * @package endboss
  */
 
+// Display the links to the extra feeds such as category feeds
+remove_action( 'wp_head', 'feed_links_extra', 3 );
+
+// Display the links to the general feeds: Post and Comment Feed
+remove_action( 'wp_head', 'feed_links', 2 );
+
+// Display the link to the Really Simple Discovery service endpoint, EditURI link
+remove_action( 'wp_head', 'rsd_link' );
+
+// Display the link to the Windows Live Writer manifest file.
+remove_action( 'wp_head', 'wlwmanifest_link' );
+
+// index link
+remove_action( 'wp_head', 'index_rel_link' );
+
+// prev link
+remove_action( 'wp_head', 'parent_post_rel_link', 10, 0 );
+
+// start link
+remove_action( 'wp_head', 'start_post_rel_link', 10, 0 );
+
+// Display relational links for the posts adjacent to the current post.
+remove_action( 'wp_head', 'adjacent_posts_rel_link', 10, 0 );
+
+// Display the XHTML generator that is generated on the wp_head hook, WP ver
+remove_action( 'wp_head', 'wp_generator' );
+
 if ( ! function_exists( 'endboss_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
@@ -123,3 +150,48 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+
+/**
+* Cleaning up wp_nav_menu
+*/
+
+//Deletes all CSS classes and id's, except for those listed in the array below
+function custom_wp_nav_menu($var) {
+	return is_array($var) ? array_intersect($var, array(
+		//List of allowed menu classes
+		'current_page_item',
+		'current_page_parent',
+		'current_page_ancestor',
+		'first',
+		'last',
+		'vertical',
+		'horizontal'
+		)
+	) : '';
+}
+
+add_filter('nav_menu_css_class', 'custom_wp_nav_menu');
+add_filter('nav_menu_item_id', 'custom_wp_nav_menu');
+add_filter('page_css_class', 'custom_wp_nav_menu');
+
+//Replaces "current-menu-item" with "active"
+function current_to_active($text){
+	$replace = array(
+		//List of menu item classes that should be changed to "active"
+		'current_page_item' => 'active',
+		'current_page_parent' => 'active',
+		'current_page_ancestor' => 'active',
+		);
+	$text = str_replace(array_keys($replace), $replace, $text);
+		return $text;
+}
+add_filter ('wp_nav_menu','current_to_active');
+
+//Deletes empty classes and removes the sub menu class
+function strip_empty_classes($menu) {
+	$menu = preg_replace('/ class=""| class="sub-menu"/','',$menu);
+	return $menu;
+}
+add_filter ('wp_nav_menu','strip_empty_classes');
+?>
