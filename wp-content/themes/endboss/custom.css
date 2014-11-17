@@ -62,12 +62,19 @@ h6 { font-size: 16px; }
   text-align: center;
 }
 /* About Section */
+.about-section .post {
+  width: 33.3333%;
+  float: left;
+  padding: 25px;
+}
 
 /* Portfolio Section */
 .portfolio-section .post {
-  width: 390px;
-  display: inline-block;
+  width: 33.3333%;
+  float: left;
+  padding: 25px;
 }
+
 /* Members Section */
 
 

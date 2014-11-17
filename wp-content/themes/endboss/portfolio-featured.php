@@ -2,11 +2,12 @@
 <?php if( $posts ) : ?>
 <?php foreach( $posts as $post ) : setup_postdata( $post ); ?>
 
-<div class="post">
-  <h3><a href="<?php echo get_permalink($post->ID); ?>" ><?php echo $post->post_title; ?></a></h3>
-  <?php the_excerpt(); ?>
-  <?php the_post_thumbnail(); ?>
-</div>
+    <div class="post">
+      <?php the_post_thumbnail(); ?>
+
+      <h3><a href="<?php echo get_permalink($post->ID); ?>" ><?php echo $post->post_title; ?></a></h3>
+      <?php the_excerpt(); ?>
+    </div>
 
 <?php endforeach; ?>
 <?php endif; ?>
