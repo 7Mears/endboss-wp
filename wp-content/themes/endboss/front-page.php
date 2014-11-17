@@ -11,19 +11,20 @@ get_header(); ?>
 
 <section id="about">
   <div class="about-section wrap">
-    <p>About section</p>
+    <h2>About</h2>
   </div>
 </section><!-- /about -->
 
 <section id="portfolio">
   <div class="portfolio-section wrap">
-    <p>Portfolio section</p>
+    <h2>Portfolio</h2>
+    <?php include( get_template_directory() . '/portfolio-featured.php' ); ?>
   </div>
 </section><!-- /portfolio -->
 
 <section id="members">
   <div class="members-section wrap">
-    <p>Members section</p>
+    <h2>Members</h2>
   </div>
 </section><!-- /members -->
 

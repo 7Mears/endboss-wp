@@ -5,13 +5,6 @@
  * @package endboss
  */
 
-/**
- * Set the content width based on the theme's design and stylesheet.
- */
-if ( ! isset( $content_width ) ) {
-	$content_width = 640; /* pixels */
-}
-
 if ( ! function_exists( 'endboss_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
@@ -38,7 +31,7 @@ function endboss_setup() {
 	 *
 	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
 	 */
-	//add_theme_support( 'post-thumbnails' );
+	add_theme_support( 'post-thumbnails' );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(

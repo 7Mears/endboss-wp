@@ -64,7 +64,10 @@ h6 { font-size: 16px; }
 /* About Section */
 
 /* Portfolio Section */
-
+.portfolio-section .post {
+  width: 390px;
+  display: inline-block;
+}
 /* Members Section */
 
 
