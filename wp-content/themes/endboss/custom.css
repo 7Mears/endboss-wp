@@ -47,11 +47,20 @@ h6 { font-size: 16px; }
 
 /* ## Header
 --------------------------------------------- */
+.site-branding,
+.main-navigation {
+  width: auto;
+  display: inline-block;
+}
+
 /* Site Branding */
 
 /* Navigation */
+.main-navigation {
+  float: right;
+}
 .nav-menu li {
-  padding-right: 25px;
+  padding-left: 25px;
 }
 
 /* ## Front-Page

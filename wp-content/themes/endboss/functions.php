@@ -127,6 +127,14 @@ function endboss_scripts() {
 add_action( 'wp_enqueue_scripts', 'endboss_scripts' );
 
 /**
+* Fonts!
+*/
+function load_fonts() {
+	wp_register_style('googleFonts', 'http://fonts.googleapis.com/css?family=Montserrat');
+	wp_enqueue_style( 'googleFonts');
+}
+add_action('wp_print_styles', 'load_fonts');
+/**
  * Implement the Custom Header feature.
  */
 //require get_template_directory() . '/inc/custom-header.php';
