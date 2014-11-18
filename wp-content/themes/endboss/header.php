@@ -16,15 +16,17 @@
 </head>
 <body <?php body_class(); ?>>
 
-<header class="wrap">
-	<div class="site-branding">
-		<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-	</div><!-- /site-branding -->
+<header>
+	<div class="header-section wrap">
+		<div class="site-branding">
+			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+		</div><!-- /site-branding -->
 
-	<nav id="site-navigation" class="main-navigation">
-		<button class="menu-toggle"><?php _e( 'Primary Menu', 'endboss' ); ?></button>
-		<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-	</nav><!-- /site-navigation -->
+		<nav id="site-navigation" class="main-navigation">
+			<button class="menu-toggle"><?php _e( 'Primary Menu', 'endboss' ); ?></button>
+			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+		</nav><!-- /site-navigation -->
+	</div><!-- /header-section -->
 </header>
 
 <div id="content" class="site-content">

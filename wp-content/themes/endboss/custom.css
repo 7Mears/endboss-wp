@@ -56,6 +56,11 @@ h6 { font-size: 16px; }
 
 /* ## Header
 --------------------------------------------- */
+header {
+  width: 100%;
+  position: absolute;
+}
+
 .site-branding,
 .main-navigation {
   width: auto;
@@ -69,7 +74,7 @@ h6 { font-size: 16px; }
   float: right;
 }
 .nav-menu li {
-  padding-left: 25px;
+  padding: 7px 0 0 25px;
 }
 
 /* ## Front-Page
@@ -81,7 +86,7 @@ h6 { font-size: 16px; }
 }
 
 .hero-section {
-  padding: 100px 0 300px 0;
+  padding: 200px 0 400px 0;
   text-align: center;
 }
 
