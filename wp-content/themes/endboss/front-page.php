@@ -4,6 +4,7 @@
   <div class="hero-section wrap">
     <h1>End Boss Creative Collective</h1>
     <h3>A collection of artists, developers, and writers.</h3>
+    <a href="contact.php" class="button">Contact us</a>
   </div>
 </section><!-- /hero -->
 
