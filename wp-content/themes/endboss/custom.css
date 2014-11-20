@@ -3,7 +3,15 @@
   margin: 0 auto;
 }
 
-
+/*** Clear dem floats */
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+}
+.cf:after {
+    clear: both;
+}
 /* ## Typographical Elements
 --------------------------------------------- */
 body {
@@ -122,6 +130,9 @@ header {
 }
 
 /* Portfolio Section */
+.portfolio-section {
+  background-color: #374140;
+}
 .portfolio-section .post {
   width: 33.3333%;
   float: left;
@@ -134,7 +145,6 @@ header {
   float: left;
   padding: 25px;
 }
-
 
 /* ## Footer
 --------------------------------------------- */
