@@ -90,6 +90,9 @@ function endboss_setup() {
 endif; // endboss_setup
 add_action( 'after_setup_theme', 'endboss_setup' );
 
+/** Custom image size */
+add_image_size( 'member-section', 400, '400', TRUE );
+
 /**
  * Register widget area.
  *
@@ -224,7 +227,7 @@ function post_type_member() {
 
     $labels = array(
         'name' => _x('Members', 'post type general name'),
-        'singular_name' => _x('Portfolio Item', 'post type singular name'),
+        'singular_name' => _x('Member', 'post type singular name'),
         'add_new' => _x('Add New', 'member'),
         'add_new_item' => __('Add New Member '),
         'edit_item' => __('Edit Member'),
