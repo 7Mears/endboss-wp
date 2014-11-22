@@ -217,5 +217,46 @@ function my_get_posts( $query ) {
 	return $query;
 }
 
+/*** Member custom post type
+    *************************/
+add_action('init', 'post_type_member');
+function post_type_member() {
+
+    $labels = array(
+        'name' => _x('Members', 'post type general name'),
+        'singular_name' => _x('Portfolio Item', 'post type singular name'),
+        'add_new' => _x('Add New', 'member'),
+        'add_new_item' => __('Add New Member '),
+        'edit_item' => __('Edit Member'),
+        'new_item' => __('New Member'),
+        'view_item' => __('View Member'),
+        'search_items' => __('Search Members'),
+        'not_found' =>  __('Nothing found'),
+        'not_found_in_trash' => __('Nothing found in Trash'),
+        'parent_item_colon' => ''
+    );
+    $args = array(
+        'labels' => $labels,
+        'public' => true,
+        'publicly_queryable' => true,
+        'show_ui' => true,
+        'query_var' => true,
+        'rewrite' => true,
+        'capability_type' => 'post',
+        'hierarchical' => false,
+        'menu_position' => null,
+        'supports' => array('title','editor','thumbnail')
+    );
+
+    register_post_type( 'member' , $args );
+}
+
+register_taxonomy("Skills",
+    array("member"),
+    array("hierarchical" => true,
+        "label" => "Skills",
+        "singular_label" => "Skill",
+        "rewrite" => true)); //***** End Member custom post type
+
 
 ?>
