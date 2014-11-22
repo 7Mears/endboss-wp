@@ -1,5 +1,5 @@
     <?php
-        $args = array( 'post_type' => 'member', 'posts_per_page' => 10 );
+        $args = array( 'post_type' => 'endboss_member', 'posts_per_page' => 10 );
         $loop = new WP_Query( $args );
         while ( $loop->have_posts() ) : $loop->the_post();?>
 
