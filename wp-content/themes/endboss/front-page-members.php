@@ -1,19 +1,16 @@
-    <div class="post">
-      <h3>Member Name</h3>
-      <p>Praesent egestas tristique nibh. Praesent ac massa at ligula laoreet iaculis. Quisque rutrum. In auctor lobortis lacus.</p>
-    </div>
+    <?php
+        $args = array( 'post_type' => 'portfolio', 'posts_per_page' => 10 );
+        $loop = new WP_Query( $args );
+        while ( $loop->have_posts() ) : $loop->the_post();?>
 
-    <div class="post">
-      <h3>Member Name</h3>
-      <p>Praesent egestas tristique nibh. Praesent ac massa at ligula laoreet iaculis. Quisque rutrum. In auctor lobortis lacus.</p>
-    </div>
+        <div class="post">
+            <h3><?php the_title(); ?></h3>
+            <p><?php the_content(); ?></p>
+        </div>
 
-    <div class="post">
-      <h3>Member Name</h3>
-      <p>Praesent egestas tristique nibh. Praesent ac massa at ligula laoreet iaculis. Quisque rutrum. In auctor lobortis lacus.</p>
-    </div>
 
-    <div class="post">
-      <h3>Member Name</h3>
-      <p>Praesent egestas tristique nibh. Praesent ac massa at ligula laoreet iaculis. Quisque rutrum. In auctor lobortis lacus.</p>
-    </div>
+    <?php endwhile; ?>
+
+
+
+
