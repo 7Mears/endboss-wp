@@ -130,13 +130,15 @@ header {
 }
 
 /* Portfolio Section */
-.portfolio-section {
-  background-color: #374140;
+#portfolio {
+  background-color: #444349;
+  color: #EEEFF7;
 }
 .portfolio-section .post {
   width: 33.3333%;
   float: left;
   padding: 25px;
+  background-color: #2A2C2B;
 }
 
 /* Members Section */
