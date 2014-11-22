@@ -18,19 +18,20 @@ body {
 	background-color: #EEEFF7;
 	color: #666;
 	font-family: 'Avenir', sans-serif;
-	font-size: 16px;
+	font-size: 18px;
 	font-weight: 400;
 	line-height: 1.625;
 	letter-spacing: 0.5px;
 }
 
-a {
-	color: #3498DB;
+a,
+a:visited {
+	color: #87CAC2;
 	text-decoration: none;
 }
 
 a:hover {
-	color: #2980B9;
+	color: #72787E;
 }
 
 /* ## Headings
@@ -43,7 +44,7 @@ h5,
 h6 {
 	font-family: 'Exo', sans-serif;
 	line-height: 1.2;
-	color: #2C3E50;
+	color: #2C353B;
 }
 
 h1 { font-size: 36px; }
@@ -56,10 +57,13 @@ h6 { font-size: 16px; }
 /* ## Buttons and Forms
 --------------------------------------------- */
 .button {
-  background: rgba(255,255,255,0.5);
+  background: #72787E;
   border-radius: 10px;
   padding: 12.5px 25px;
   display: inline-block;
+}
+.button:hover {
+  color: #2C353B;
 }
 
 /* ## Header
@@ -131,14 +135,33 @@ header {
 
 /* Portfolio Section */
 #portfolio {
-  background-color: #444349;
+  background-color: #2C353B;
   color: #EEEFF7;
 }
+
 .portfolio-section .post {
-  width: 33.3333%;
+  width: 48%;
+  margin: 1%;
   float: left;
   padding: 25px;
-  background-color: #2A2C2B;
+  background-color: #3D444A;
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.portfolio-section .wp-post-image {
+  width: 50%;
+  height: 100%;
+  float: right;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.portfolio-section .post-content {
+  width: 50%;
+  float: left;
 }
 
 /* Members Section */

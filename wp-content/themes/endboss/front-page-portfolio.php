@@ -4,9 +4,10 @@
 
     <div class="post">
       <?php the_post_thumbnail(); ?>
-
-      <h3><a href="<?php echo get_permalink($post->ID); ?>" ><?php echo $post->post_title; ?></a></h3>
-      <?php the_excerpt(); ?>
+      <div class="post-content">
+        <h3><a href="<?php echo get_permalink($post->ID); ?>" ><?php echo $post->post_title; ?></a></h3>
+        <?php the_excerpt(); ?>
+      </div>
     </div>
 
 <?php endforeach; ?>
