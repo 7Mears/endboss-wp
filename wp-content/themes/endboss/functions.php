@@ -248,11 +248,11 @@ function post_type_member() {
         'supports' => array('title','editor','thumbnail')
     );
 
-    register_post_type( 'member' , $args );
+    register_post_type( 'endboss_member' , $args );
 }
 
 register_taxonomy("Skills",
-    array("member"),
+    array("endboss_member"),
     array("hierarchical" => true,
         "label" => "Skills",
         "singular_label" => "Skill",
