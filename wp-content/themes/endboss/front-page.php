@@ -9,7 +9,7 @@
 </section><!-- /hero -->
 
 <section id="about">
-  <div class="about-section wrap">
+  <div class="about-section wrap cf">
     <h2>About</h2>
 <?php include( get_template_directory() . '/front-page-about.php' ); ?>
   </div>
@@ -17,14 +17,14 @@
 </section><!-- /about -->
 
 <section id="portfolio">
-  <div class="portfolio-section wrap">
+  <div class="portfolio-section wrap cf">
     <h2>Portfolio</h2>
 <?php include( get_template_directory() . '/front-page-portfolio.php' ); ?>
-  </div>
+  </div><br style="clear:both"/>
 </section><!-- /portfolio -->
 
 <section id="members">
-  <div class="members-section wrap">
+  <div class="members-section wrap cf">
     <h2>Members</h2>
 <?php include( get_template_directory() . '/front-page-members.php' ); ?>
   </div>
